@@ -2,28 +2,26 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
-require('dotenv').config();  // Load .env variables
+require('dotenv').config();
+
 console.log("EMAIL_USER:", process.env.EMAIL_USER);
 console.log("EMAIL_PASS loaded:", process.env.EMAIL_PASS ? "Yes" : "No");
-
 
 const app = express();
 const PORT = 5500;
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('public')); // Serve static files if needed
+app.use(express.static('public'));
 
-// Create reusable transporter object using Gmail SMTP
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,    // your Gmail address (from .env)
-    pass: process.env.EMAIL_PASS,    // your Gmail app password (from .env)
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
-// Contact form endpoint
 app.post('/contact', async (req, res) => {
   const { name, email, message } = req.body;
   
@@ -36,10 +34,9 @@ app.post('/contact', async (req, res) => {
     return res.status(400).json({ error: 'Invalid email format.' });
   }
 
-  // Email options
   const mailOptions = {
     from: email,
-    to: process.env.EMAIL_USER,    // Your Gmail to receive the message
+    to: process.env.EMAIL_USER,
     subject: `New contact form message from ${name}`,
     text: `You have a new message from your website contact form:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
   };
