@@ -1,0 +1,17 @@
+{
+    "skills": [
+      { "name": "Graphic Designing", "level": 50 },
+      { "name": "Video Editing", "level": 35 },
+      { "name": "Copywriting", "level": 25 },
+      { "name": "Programming", "level": 40 }
+     
+    ],
+    "interests": [
+      { "name": "Writing Novels", "icon": "fas fa-pen" },
+      { "name": "Reading", "icon": "fas fa-book" },
+      { "name": "Filming", "icon": "fas fa-video" },
+      { "name": "Cooking", "icon": "fas fa-utensils" },
+      { "name": "Marketing", "icon": "fas fa-chart-line" }
+    ]
+  }
+  

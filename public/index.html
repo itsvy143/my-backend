@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">My Personal Website</a>
+        <button class="hamburger" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero-section"  style="background-image: url('https://images.pexels.com/photos/269583/pexels-photo-269583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <div class="container hero-content" data-aos="fade-up">
+      <img src="myprofilepic.jpg" alt="Profile Picture" class="profile-pic" />
+      <h1>Hello, I'm Ivy Jane Dabilbil</h1>
+      <p>IT Student</p>
+      <a href="#contact" class="btn btn-primary">Connect With Me</a>
+    </div>
+  </section>
+
+  <main class="container main-content">
+    <section id="about" data-aos="fade-up" class="section about-section">
+      <h2>About Me</h2>
+      <p>Hi! I'm Ivy Jane Dabilbil, a first year Bachelor of Science in Information Technology (BSIT) student. I'm passionate about learning and always eager to improve my skills. I enjoy
+        exploring new technologies and finding creative ways to solve problems. I'm dedicated, hardworking and open to new experiences that will help me grow both personally and professionally.
+        My goal is to become a skilled IT professional with the skill of designing and writing that can make a positive impact through technology and society.
+      </p>
+    </section>
+
+    <section id="education" data-aos="fade-up" class="section education-section">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <strong>Bachelor of Science in Information Technology</strong><br />
+          Eastern Visayas State University - Carigara Campus
+        </li>
+        <li>
+          <strong>Senior High School - ICT Strand</strong><br />
+          Holy Cross College of Carigara, Incorporated
+        </li>
+        <li>
+          <strong>Junior High School</strong><br />
+          Holy Cross College of Carigara, Incorporated
+        </li>
+         <li>
+          <strong>Elementary</strong><br />
+          Cassidy Elementary School
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills" data-aos="fade-up" class="section skills-section">
+      <h2>Skills</h2>
+      <div id="skills-container" class="skills-container">
+        <!-- Skills loaded dynamically -->
+      </div>
+    </section>
+
+    <section id="interests" data-aos="fade-up" class="section interests-section">
+      <h2>Interests</h2>
+      <div id="interests-container" class="interests-container">
+        <!-- Interests loaded dynamically -->
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up" class="section contact-section">
+      <h2>Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/its.vy07" target="_blank" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/its.vy07?igsh=NWRuaG83MGYwYTlt" target="_blank" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:ivyjane.dabilbil@evsu.edu.ph" aria-label="Email" class="social-icon"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+6398193796" aria-label="Phone" class="social-icon"><i class="fas fa-phone"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Ivy Jane F. Dabilbil. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
